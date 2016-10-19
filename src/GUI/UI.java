@@ -251,6 +251,11 @@ public class UI extends javax.swing.JFrame {
         });
 
         jButtonClear.setText("Clear");
+        jButtonClear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonClearActionPerformed(evt);
+            }
+        });
 
         jButtonExit.setText("Exit");
         jButtonExit.addActionListener(new java.awt.event.ActionListener() {
@@ -405,6 +410,15 @@ public class UI extends javax.swing.JFrame {
         Summary frame = new Summary(this,rootPaneCheckingEnabled);
         frame.setVisible(true);
     }//GEN-LAST:event_jButtonSummaryActionPerformed
+
+    private void jButtonClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonClearActionPerformed
+        jTextFieldPrice.setText("");
+        jTextFieldTradein.setText("");
+        jTextFieldFeat.setText("");
+        jTextFieldSubtotal.setText("");
+        jTextFieldSTax.setText("");
+        jTextFieldDue.setText("");
+    }//GEN-LAST:event_jButtonClearActionPerformed
 
     /**
      * @param args the command line arguments
